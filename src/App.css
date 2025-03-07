@@ -1,0 +1,330 @@
+/* Default Styles */
+/* Make sure body takes the full height of the viewport */
+html,
+body {
+  height: 60%;
+}
+ 
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+ 
+body {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+}
+ 
+.content {
+  flex-grow: 1; /* This ensures content fills available space */
+  padding: 10vh 0 0 0; /* Adjust this to the height of the navbar */
+}
+ 
+.App {
+  font-family: "Montserrat", Arial, sans-serif;
+  text-align: center;
+  flex-grow: 1; /* Allow the app content to grow and fill the available space */
+}
+ 
+/************************************** General styling *****************************/
+/* main page */
+.wrapper {
+  background-color: #eaeaea;
+  background-position: center;
+  background-size: cover;
+}
+ 
+/* navigation bar */
+.header a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 40px;
+}
+ 
+.header {
+  height: 10vh;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: #272726;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100; /* Ensure the navbar stays on top */
+}
+ 
+.logo {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 32px;
+  font-weight: 700;
+}
+ 
+.logo div {
+  text-align: center;
+}
+ 
+.logo img {
+  width: 48px;
+  margin: 10px;
+}
+ 
+.navbar a {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 40px;
+}
+ 
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #272726;
+  transition: 0.3s;
+}
+ 
+.navbar a:hover::before {
+  width: 100%;
+}
+ 
+/* Add padding to the top of the content to prevent overlap */
+.main-content {
+  padding-top: 80px; /* Height of the navbar */
+  z-index: 0;
+}
+ 
+/* text section */
+.about {
+  height: auto;
+  margin: 0px 0;
+  padding: 20px 30px;
+  background-color: #eaeaea;
+  color: rgb(0, 0, 0);
+}
+ 
+.about button {
+  margin: 10px;
+  float: right;
+  text-decoration: white;
+}
+ 
+/* carousel */
+.Carousel {
+  height: 40vh;
+  border: solid 1px;
+  overflow: hidden;
+}
+ 
+.Carousel img {
+  width: 100%;
+}
+ 
+/* Button styling */
+button {
+  background-color:  #e9c43b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color:  #e9c43b;
+}
+ 
+/* footer */
+/* Footer styling */
+.footer {
+  background-color: #272726;
+  color: white;
+  width: 100%;
+  height: 100px; /* Fixed height for the footer */
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  margin-top: auto; /* Push footer to the bottom */
+}
+ 
+/* Footer container styling */
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+ 
+.footerBottom {
+  font-size: 14px;
+  margin-top: 20px;
+}
+ 
+.footerBottom .designer {
+  font-weight: bold;
+}
+ 
+/***************************************** pages  ************************************/
+/* members page */
+.members-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  padding-bottom: 40px;
+}
+ 
+.members-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 40px 20px;
+  text-align: center;
+}
+ 
+.members-table {
+  width: 80%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+ 
+.members-table th,
+.members-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+ 
+.members-table th {
+  background: #272726;
+  color: white;
+  text-transform: uppercase;
+}
+ 
+.members-table tr:hover {
+  background-color: #f1f1f1;
+}
+ 
+.member-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+ 
+/* Publications Page */
+.publications-container .year-header {
+  background-color: #eaeaea;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 20px;
+}
+ 
+.publications-container .publication-entry {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #eaeaea;
+}
+ 
+.publications-container .publication-entry h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+ 
+.publications-container .publication-entry .authors,
+.publications-container .publication-entry .journal {
+  font-size: 14px;
+  margin: 5px 0;
+}
+ 
+.publications-container .abstract-button {
+  background-color:  #e9c43b;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+}
+ 
+.publications-container .abstract-button:hover {
+  background-color:  #e9c43b;
+}
+ 
+/* Events Page */
+.events-container {
+  margin-top: 30px;
+}
+ 
+.event-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #eaeaea;
+}
+ 
+.event-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+ 
+.event-card .event-date {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+ 
+.event-card .event-description {
+  font-size: 14px;
+  color: #333;
+}
+ 
+/* Opportunities Page */
+.opportunities-container {
+  margin-top: 30px;
+}
+ 
+.opportunity-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #eaeaea;
+}
+ 
+.opportunity-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+ 
+.opportunity-card .opportunity-location {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+ 
+.opportunity-card .opportunity-description {
+  font-size: 14px;
+  color: #333;
+}
+ 
+.opportunity-card .opportunity-deadline {
+  font-size: 14px;
+  color:  #e9c43b;
+  font-weight: bold;
+}
