@@ -1,6 +1,5 @@
-import React from 'react';
 import './App.css';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Foot from "./components/Foot";
@@ -9,9 +8,10 @@ import Publications from "./components/Publications"; // Fixed import
 import Events from "./components/Events";
 import Opportunities from "./components/Opportunities"; // Fixed spelling
 
+
 const App = () => {
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <section>
         <div className="wrapper">
           <Navbar />
@@ -21,11 +21,11 @@ const App = () => {
             <Route path="/publications" element={<Publications />} />
             <Route path="/events" element={<Events />} />
             <Route path="/opportunities" element={<Opportunities />} />
-          </Routes>
+            </Routes>
         </div>
         <Foot /> {/* Footer placed correctly */}
       </section>
-    </React.Fragment>
+            </BrowserRouter>
   );
 };
 
